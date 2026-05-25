@@ -246,6 +246,7 @@ Leader key = `<Space>`
 | -----                  | -------------                                     |
 | `v`                    | start visual mode, mark lines, then do a command  |
 | `V`                    | start linewise visual mode                        |
+| `gv`                   | reselect previous selection                       |
 | `o`                    | move to other end of marked area                  |
 | `Ctrl+v`               | start visual block mode                           |
 | `O`                    | move to other corner of block                     |
