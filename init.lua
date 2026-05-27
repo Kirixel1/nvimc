@@ -49,7 +49,6 @@ vim.opt.errorbells = false                                           -- Disable 
 vim.opt.mouse = ''                                                   -- Disable mouse support
 
 -- Autocompletion options
-vim.opt.autocomplete = true                                          -- Enabling native autocomplete
 vim.opt.complete:append('o')                                         -- Append omnicompletion to default
 vim.opt.completeopt = { 'menuone', 'noselect', 'popup' }             -- Some minor completeopt settings (see ':help completeopt')
 vim.opt.pumborder = 'single'                                         -- Single line autocompletion border box
@@ -110,6 +109,7 @@ vim.keymap.set('n', '<C-Enter>', 'o<Esc>', { desc = 'New line below without swit
 vim.keymap.set('n', '<C-Backspace>', 'O<Esc>', { desc = 'New line above without switchin to insert mode' })
 vim.keymap.set('n', '<C-,>', 'A,<Esc>', { desc = 'Comma at the end of the line' })
 vim.keymap.set('n', '<C-;>', 'A;<Esc>', { desc = 'Dot and comma at the end of the line' })
+vim.keymap.set('i', '<C-Space>', '<C-x><C-o>', { desc = 'Trigger omni completion' })
 
 vim.keymap.set('n', '==', function()
     vim.cmd('lua MiniTrailspace.trim()')
