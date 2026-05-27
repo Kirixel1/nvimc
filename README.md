@@ -38,16 +38,16 @@ Leader key = `<Space>`
 
 ### Buffer Switching
 
-| Key        | Action     | Description                                                     |
-| -----      | --------   | -------------                                                   |
-| `gbn`      | `:bnext`   | Next buffer                                                     |
-| `gbp`      | `:bprev`   | Previous buffer                                                 |
-| `gbd`      | `:bdelete` | Delete buffer                                                   |
-| `Ctrl+x`   |            | Swap windows places(between two buffers of the same split type) |
-| `Ctrl+W H` |            | Changes current window split state to right positon             |
-| `Ctrl+W J` |            | Changes current window split state to down positon              |
-| `Ctrl+W K` |            | Changes current window split state to up positon                |
-| `Ctrl+W L` |            | Changes current window split state to left positon              |
+| Key             | Action     | Description                                                     |
+| -----           | --------   | -------------                                                   |
+| `gbn`           | `:bnext`   | Next buffer                                                     |
+| `gbp`           | `:bprev`   | Previous buffer                                                 |
+| `gbd`           | `:bdelete` | Delete buffer                                                   |
+| `Ctrl+w Ctrl+x` |            | Swap windows places(between two buffers of the same split type) |
+| `Ctrl+w H`      |            | Changes current window split state to right positon             |
+| `Ctrl+w J`      |            | Changes current window split state to down positon              |
+| `Ctrl+w K`      |            | Changes current window split state to up positon                |
+| `Ctrl+w L`      |            | Changes current window split state to left positon              |
 
 ### Improved Scrolling & Search
 
