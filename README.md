@@ -10,7 +10,7 @@ it uses native plugin loading via `vim.pack.add()`.
 So feel free to explore! It's well documented (I think) and self-explanatory,
 so nothing too difficult.
 
-
+<p align="center">
   <h1 align="center">Neovim Sheet Note</h1>
 </p>
 
