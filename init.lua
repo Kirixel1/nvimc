@@ -288,7 +288,7 @@ vim.cmd('packadd nvim.undotree')          -- Enable undotree butil in plugin(onl
 -- Mini.nvim plugin
 require('mini.align').setup()             -- Align module
 -- require('mini.surround').setup()       -- Surround module(s)
-require('mini.pairs').setup()             -- Autopairs module
+-- require('mini.pairs').setup()          -- Autopairs module
 require('mini.comment').setup()           -- Comments module (gcc)
 require('mini.indentscope').setup()       -- Indentscope dashes module
 require('mini.trailspace').setup()        -- Trailspaces module
