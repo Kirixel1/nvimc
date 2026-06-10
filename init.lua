@@ -1,8 +1,8 @@
--- ==========================================================================================================
+-- ==================================================================================================================
 --   Welcome to my personal configuration of Neovim in a single init.lua file! (only for version of Neovim 0.12.0+).
 --   My configuration is divided by sections with keywords (END/BEGIN), for better navigation in the file.
 --   All well documented, so anyone can understand what each option and setting means.
--- ============== ===========================================================================================
+-- ==================================================================================================================
 
 
 -- ==========================================================================================================
@@ -112,8 +112,10 @@ vim.keymap.set('n', '<C-;>', 'A;<Esc>', { desc = 'Dot and comma at the end of th
 vim.keymap.set('i', '<C-Space>', '<C-x><C-o>', { desc = 'Trigger omni completion' })
 
 vim.keymap.set('n', '==', function()
+    local view = vim.fn.winsaveview()
+    vim.cmd('normal! ggVG=')
     vim.cmd('lua MiniTrailspace.trim()')
-    vim.cmd('normal ggVG=')
+    vim.fn.winrestview(view)
 end, { desc = 'Reindent all the text in a file and delete all trailing spaces (unnecessary spaces)' })
 
 vim.keymap.set('n', '<Esc>', '<Cmd>nohlsearch<CR>', { noremap = true, silent = true, desc = 'Clear search highlight on Escape' })
