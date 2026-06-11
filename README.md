@@ -55,24 +55,27 @@ Leader key = `<Space>`
 
 ### Window Management
 
-| Key              | Action                | Description                                         |
-| -----            | --------              | -------------                                       |
-| `<C-h>`          | `<C-w><C-h>`          | Move to left window                                 |
-| `<C-j>`          | `<C-w><C-j>`          | Move to below window                                |
-| `<C-k>`          | `<C-w><C-k>`          | Move to above window                                |
-| `<C-l>`          | `<C-w><C-l>`          | Move to right window                                |
-| `<A-h>`          | `:vertical resize +9` | Resize window right                                 |
-| `<A-j>`          | `:resize +6`          | Resize window down                                  |
-| `<A-k>`          | `:resize -6`          | Resize window up                                    |
-| `<A-l>`          | `:vertical resize -9` | Resize window left                                  |
-| `Ctrl+w Ctrl+x`  |                       | Exchange current window with next one               |
-| `Ctrl+w h`       |                       | Changes current window split state to right positon |
-| `Ctrl+w j`       |                       | Changes current window split state to down positon  |
-| `Ctrl+w k`       |                       | Changes current window split state to up positon    |
-| `Ctrl+w l`       |                       | Changes current window split state to left positon  |
-| `Ctrl+w o`       |                       | Closes all other windows except where cursor is     |
-| `Ctrl+w c(or q)` |                       | Closes current window                               |
-| `Ctrl+w =`       |                       | Make windows equally sized                          |
+| Key             | Action                | Description                                                        |
+| -----           | --------              | -------------                                                      |
+| `<C-w> l`       |                       | Move cursor to left window                                         |
+| `<C-w> j`       |                       | Move cursor to below window                                        |
+| `<C-w> k`       |                       | Move cursor to above window                                        |
+| `<C-w> h`       |                       | Move cursor to right window                                        |
+| `<C-w><C-x>`    |                       | Exchange current window with next one                              |
+| `<C-w> H`       |                       | Changes current window split state to right positon                |
+| `<C-w> J`       |                       | Changes current window split state to down positon                 |
+| `<C-w> K`       |                       | Changes current window split state to up positon                   |
+| `<C-w> L`       |                       | Changes current window split state to left positon                 |
+| `<C-w> o`       |                       | Closes all other windows except where cursor is                    |
+| `<C-w> c(or q)` |                       | Closes current window                                              |
+| `<C-w> =`       |                       | Make windows equally sized                                         |
+| `<C-w> w`       |                       | Move cursor to the focusable window below/right of the current one |
+| `<C-w> v`       |                       | Opens new window of the current buffer in the vertical split       |
+| `<C-w> s`       |                       | Opens new window of the current buffer in the horizontal split     |
+| `<A-h>`         | `:vertical resize +9` | Resize window right                                                |
+| `<A-j>`         | `:resize +6`          | Resize window down                                                 |
+| `<A-k>`         | `:resize -6`          | Resize window up                                                   |
+| `<A-l>`         | `:vertical resize -9` | Resize window left                                                 |
 
 ### Convenience
 
