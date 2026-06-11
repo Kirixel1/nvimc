@@ -70,15 +70,15 @@ Leader key = `<Space>`
 
 ### Convenience
 
-| Key                 | Action                            | Description                             |
-| -----               | --------                          | -------------                           |
-| `<C-Enter>`         | `o<Esc>`                          | New line below without insert mode      |
-| `<C-Backspace>`     | `O<Esc>`                          | New line above without insert mode      |
-| `<C-,>`             | `A,<Esc>`                         | Append comma at end of line             |
-| `<C-;>`             | `A;<Esc>`                         | Append semicolon at end of line         |
-| `==`                | `MiniTrailspace.trim()` + `ggVG=` | Reindent all & trim trailing whitespace |
-| `<Esc>`             | `:nohlsearch`                     | Clear search highlight                  |
-| `<Esc><Esc>` (term) | `<C-\><C-n>`                      | Terminal: switch to normal mode         |
+| Key                 | Action                           | Description                             |
+| -----               | --------                         | -------------                           |
+| `<C-Enter>`         | `o<Esc>`                         | New line below without insert mode      |
+| `<C-Backspace>`     | `O<Esc>`                         | New line above without insert mode      |
+| `<C-,>`             | `A,<Esc>`                        | Append comma at end of line             |
+| `<C-;>`             | `A;<Esc>`                        | Append semicolon at end of line         |
+| `=wb`               | `MiniTrailspace.trim()` + `gg=G` | Reindent all & trim trailing whitespace |
+| `<Esc>`             | `:nohlsearch`                    | Clear search highlight                  |
+| `<Esc><Esc>` (term) | `<C-\><C-n>`                     | Terminal: switch to normal mode         |
 
 ### LSP Keymaps
 
