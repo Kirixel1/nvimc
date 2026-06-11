@@ -289,7 +289,12 @@ require('mini.comment').setup()           -- Comments module (gcc)
 require('mini.indentscope').setup()       -- Indentscope dashes module
 require('mini.trailspace').setup()        -- Trailspaces module
 require('mini.icons').setup()             -- Icons module
-require('mini.operators').setup()         -- Operators module(mainly for exchanging text regions)
+require('mini.operators').setup({         -- Operators module(mainly for exchanging text regions)
+    exchange = {
+        prefix = 'gX',
+        reindent_linewise = true,
+    },
+})
 require('mini.surround').setup()          -- Surround module for surrounding selection with special symbols
 MiniIcons.mock_nvim_web_devicons()        -- Integrates mini.icons with other plugins that can use icons
 -- `HJKL` for moving visual selection (overrides H, L, J in Visual mode)
