@@ -1,48 +1,39 @@
 <p align="center">
-  <h1 align="center">Neovim Configuration</h1>
+  <h1 align="center"><b>BASED</b> neovim config</h1>
 </p>
 
-Welcome to my minimal Neovim configuration!
+Welcome to my **BASED** neovim configuration!
 
-**Minimal** — only two files (one really, the other is just a note) and no
-Lazy.nvim or other package loaders. You must have **Neovim 0.12.0+** because
-it uses native plugin loading via `vim.pack.add()`.
-So feel free to explore! It's well documented (I think) and self-explanatory,
-so nothing too difficult.
+**BASED** means that my config is only one init.lua file no Lazy.nvim or other external package loaders dependencies.
+You must have **neovim 0.12.0+** because it uses native plugin loading via `vim.pack.add()`.
+So feel free to explore! It's well documented (I think) and self-explanatory.
 
-<p align="center">
-  <h1 align="center">Neovim Sheet Note</h1>
-</p>
+Some of the keymaps taked from [vim.rtorr.com](https://vim.rtorr.com/) and also constantly updating when I explore new motions from help documentation `:h/:help`.
 
-
-This Note is divided on two section:
-1. Config special key bindings
-2. Motions. All the vim motions/operators/keys that I'm using and some not(all taked from this site: [vim.rtorr.com](https://vim.rtorr.com/) and puted into Motions section)
-
-# Config special key bindings
+# Reference keymaps manual
 
 ### Leader Keymaps
 
 Leader key = `<Space>`
 
-| Key          | Action                     | Description                         |
-| -----        | --------                   | -------------                       |
-| `<leader>pv` | `:Ex`                      | Open netrw file explorer            |
-| `<leader>it` | `:InspectTree`             | Open tree-sitter inspection buffer  |
-| `<leader>sk` | `:ShowkeysToggle`          | Toggle showkeys widget              |
-| `<leader>O`  | `o<Esc>kO<Esc>j`           | Add empty lines                     |
-| `<leader>ff` | `fzf-lua.files()`          | Find files (FZF)                    |
-| `<leader>fg` | `fzf-lua.live_grep()`      | Live grep (FZF)                     |
-| `<leader>fb` | `fzf-lua.buffers()`        | List buffers (FZF)                  |
-| `<leader>fh` | `fzf-lua.help_tags()`      | Search help tags (FZF)              |
+| Key          | Action                | Description                        |
+| -----        | --------              | -------------                      |
+| `<leader>pv` | `:Ex`                 | Open netrw file explorer           |
+| `<leader>it` | `:InspectTree`        | Open tree-sitter inspection buffer |
+| `<leader>sk` | `:ShowkeysToggle`     | Toggle showkeys widget             |
+| `<leader>O`  | `o<Esc>kO<Esc>j`      | Add empty lines                    |
+| `<leader>ff` | `fzf-lua.files()`     | Find files (FZF)                   |
+| `<leader>fg` | `fzf-lua.live_grep()` | Live grep (FZF)                    |
+| `<leader>fb` | `fzf-lua.buffers()`   | List buffers (FZF)                 |
+| `<leader>fh` | `fzf-lua.help_tags()` | Search help tags (FZF)             |
 
 ### Buffer Switching
 
-| Key             | Action     | Description                                                     |
-| -----           | --------   | -------------                                                   |
-| `gbn`           | `:bnext`   | Next buffer                                                     |
-| `gbp`           | `:bprev`   | Previous buffer                                                 |
-| `gbd`           | `:bdelete` | Delete buffer                                                   |
+| Key   | Action     | Description     |
+| ----- | --------   | -------------   |
+| `gbn` | `:bnext`   | Next buffer     |
+| `gbp` | `:bprev`   | Previous buffer |
+| `gbd` | `:bdelete` | Delete buffer   |
 
 ### Improved Scrolling & Search
 
@@ -55,27 +46,27 @@ Leader key = `<Space>`
 
 ### Window Management
 
-| Key             | Action                | Description                                                        |
-| -----           | --------              | -------------                                                      |
-| `<C-w> l`       |                       | Move cursor to left window                                         |
-| `<C-w> j`       |                       | Move cursor to below window                                        |
-| `<C-w> k`       |                       | Move cursor to above window                                        |
-| `<C-w> h`       |                       | Move cursor to right window                                        |
-| `<C-w><C-x>`    |                       | Exchange current window with next one                              |
-| `<C-w> H`       |                       | Changes current window split state to right positon                |
-| `<C-w> J`       |                       | Changes current window split state to down positon                 |
-| `<C-w> K`       |                       | Changes current window split state to up positon                   |
-| `<C-w> L`       |                       | Changes current window split state to left positon                 |
-| `<C-w> o`       |                       | Closes all other windows except where cursor is                    |
-| `<C-w> c(or q)` |                       | Closes current window                                              |
-| `<C-w> =`       |                       | Make windows equally sized                                         |
-| `<C-w> w`       |                       | Move cursor to the focusable window below/right of the current one |
-| `<C-w> v`       |                       | Opens new window of the current buffer in the vertical split       |
-| `<C-w> s`       |                       | Opens new window of the current buffer in the horizontal split     |
-| `<A-h>`         | `:vertical resize +9` | Resize window right                                                |
-| `<A-j>`         | `:resize +6`          | Resize window down                                                 |
-| `<A-k>`         | `:resize -6`          | Resize window up                                                   |
-| `<A-l>`         | `:vertical resize -9` | Resize window left                                                 |
+| Key             | Description                                                        |
+| -----           | -------------                                                      |
+| `<C-w> l`       | Move cursor to left window                                         |
+| `<C-w> j`       | Move cursor to below window                                        |
+| `<C-w> k`       | Move cursor to above window                                        |
+| `<C-w> h`       | Move cursor to right window                                        |
+| `<C-w><C-x>`    | Exchange current window with next one                              |
+| `<C-w> H`       | Changes current window split state to right positon                |
+| `<C-w> J`       | Changes current window split state to down positon                 |
+| `<C-w> K`       | Changes current window split state to up positon                   |
+| `<C-w> L`       | Changes current window split state to left positon                 |
+| `<C-w> o`       | Closes all other windows except where cursor is                    |
+| `<C-w> c(or q)` | Closes current window                                              |
+| `<C-w> =`       | Make windows equally sized                                         |
+| `<C-w> w`       | Move cursor to the focusable window below/right of the current one |
+| `<C-w> v`       | Opens new window of the current buffer in the vertical split       |
+| `<C-w> s`       | Opens new window of the current buffer in the horizontal split     |
+| `<A-h>`         | Resize window right                                                |
+| `<A-j>`         | Resize window down                                                 |
+| `<A-k>`         | Resize window up                                                   |
+| `<A-l>`         | Resize window left                                                 |
 
 ### Convenience
 
@@ -118,7 +109,9 @@ Leader key = `<Space>`
 | `K`                       | Visual | Move selection up (MiniMove)     |
 | `ga + character to align` | Visual | Align text by character to align |
 
-### Miscellaneous
+### Fun stuff
+So when you're using arrow keys it prints skill issue cause you use vim!
+Arrow keys, mouse and other things are not respectful here >_<
 
 | Key       | Action                  | Description        |
 | -----     | --------                | -------------      |
@@ -126,8 +119,6 @@ Leader key = `<Space>`
 | `<Down>`  | `print('skill issue?')` | Disabled arrow key |
 | `<Left>`  | `print('skill issue?')` | Disabled arrow key |
 | `<Right>` | `print('skill issue?')` | Disabled arrow key |
-
-# Motions
 
 ### Global
 
