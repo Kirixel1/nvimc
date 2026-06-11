@@ -111,9 +111,9 @@ vim.keymap.set('n', '<C-,>', 'A,<Esc>', { desc = 'Comma at the end of the line' 
 vim.keymap.set('n', '<C-;>', 'A;<Esc>', { desc = 'Dot and comma at the end of the line' })
 vim.keymap.set('i', '<C-Space>', '<C-x><C-o>', { desc = 'Trigger omni completion' })
 
-vim.keymap.set('n', '==', function()
+vim.keymap.set('n', '=wb', function()
     local view = vim.fn.winsaveview()
-    vim.cmd('normal! ggVG=')
+    vim.cmd('normal! gg=G')
     vim.cmd('lua MiniTrailspace.trim()')
     vim.fn.winrestview(view)
 end, { desc = 'Reindent all the text in a file and delete all trailing spaces (unnecessary spaces)' })
