@@ -19,13 +19,15 @@ Leader key = `<Space>`
 | Key          | Action                | Description                        |
 | -----        | --------              | -------------                      |
 | `<leader>pv` | `:Ex`                 | Open netrw file explorer           |
-| `<leader>it` | `:InspectTree`        | Open tree-sitter inspection buffer |
 | `<leader>sk` | `:ShowkeysToggle`     | Toggle showkeys widget             |
 | `<leader>O`  | `o<Esc>kO<Esc>j`      | Add empty lines                    |
 | `<leader>ff` | `fzf-lua.files()`     | Find files (FZF)                   |
 | `<leader>fg` | `fzf-lua.live_grep()` | Live grep (FZF)                    |
 | `<leader>fb` | `fzf-lua.buffers()`   | List buffers (FZF)                 |
 | `<leader>fh` | `fzf-lua.help_tags()` | Search help tags (FZF)             |
+| `<leader>o`  | `init_selection`      | Initialize incremental selection   |
+| `<leader>i`  | `increment_node`      | Incrementing initialized selection |
+| `<leader>d`  | `decrement_node`      | Decrementing initialized selection |
 
 ### Buffer Switching
 
