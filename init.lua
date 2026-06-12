@@ -281,19 +281,20 @@ vim.cmd.colorscheme('gruber-darker')      -- Enable gruber-darker colorscheme
 vim.cmd('packadd nvim.undotree')          -- Enable undotree butil in plugin(only in Neovim 0.12+)
 
 -- Mini.nvim plugin
-require('mini.align').setup()             -- Align module
-require('mini.comment').setup()           -- Comments module (gcc)
-require('mini.indentscope').setup()       -- Indentscope dashes module
-require('mini.trailspace').setup()        -- Trailspaces module
-require('mini.icons').setup()             -- Icons module
-require('mini.operators').setup({         -- Operators module(mainly for exchanging text regions)
+require('mini.align').setup()                       -- Align module
+require('mini.comment').setup()                     -- Comments module
+require('mini.indentscope').setup({ symbol = '|' }) -- Indentscope dashes module
+require('mini.trailspace').setup()                  -- Trailspaces module
+require('mini.icons').setup()                       -- Icons module
+require('mini.operators').setup({                   -- Operators module(mainly for exchanging text regions)
     exchange = {
         prefix = 'gX',
         reindent_linewise = true,
     },
 })
-require('mini.surround').setup()          -- Surround module for surrounding selection with special symbols
-MiniIcons.mock_nvim_web_devicons()        -- Integrates mini.icons with other plugins that can use icons
+require('mini.surround').setup()                    -- Surround module for surrounding selection with special symbols
+MiniIcons.mock_nvim_web_devicons()                  -- Integrates mini.icons with other plugins that can use icons
+
 -- `HJKL` for moving visual selection (overrides H, L, J in Visual mode)
 -- Mini move module for moving sections of code
 require('mini.move').setup({
@@ -324,7 +325,7 @@ require('lualine').setup( {
         lualine_a = {'mode'},
         lualine_b = {'diff', 'diagnostics'},
         lualine_c = { { 'filename', path = 1 } },
-        lualine_x = {'encoding', 'fileformat', 'filetype', 'lsp_status'},
+        lualine_x = { },
         lualine_y = {'progress'},
         lualine_z = {'location'}
     },
