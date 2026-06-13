@@ -68,16 +68,12 @@ vim.keymap.set('n', '<leader>pv', '<cmd>Ex<CR>',                                
 vim.keymap.set('n', '<leader>sk', '<cmd>ShowkeysToggle<CR>',                     { desc = 'Show keys in the down-center of the screen' })
 vim.keymap.set('n', '<leader>O',  'o<esc>kO<Esc>j',                              { desc = 'Add empty lines' })
 vim.keymap.set('n', '<leader>cm', '<cmd>Compile<CR>',                            { desc = 'Enters compilation mode' })
-vim.keymap.set('n', '<leader>ff', function() require('fzf-lua').files() end,     { desc = 'FZF find files in the current directory' })
-vim.keymap.set('n', '<leader>fg', function() require('fzf-lua').live_grep() end, { desc = 'FZF live grep' })
-vim.keymap.set('n', '<leader>fb', function() require('fzf-lua').buffers() end,   { desc = 'FZF buffers' })
-vim.keymap.set('n', '<leader>fh', function() require('fzf-lua').help_tags() end, { desc = 'FZF help tags' })
 
 -- Tabs keymaps
-vim.keymap.set('n', '<leader>nt', '<cmd>tabnext<CR>',     { desc = 'Next tab' })
-vim.keymap.set('n', '<leader>pt', '<cmd>tabprevious<CR>', { desc = 'Previous tab' })
-vim.keymap.set('n', '<leader>ct', '<cmd>tabclose<CR>',    { desc = 'Close tab' })
-vim.keymap.set('n', '<leader>ot', '<cmd>tabnew<CR>',      { desc = 'Opens new tab' })
+vim.keymap.set('n', '<leader>tn', '<cmd>tabnext<CR>',     { desc = 'Next tab' })
+vim.keymap.set('n', '<leader>tp', '<cmd>tabprevious<CR>', { desc = 'Previous tab' })
+vim.keymap.set('n', '<leader>tc', '<cmd>tabclose<CR>',    { desc = 'Close tab' })
+vim.keymap.set('n', '<leader>to', '<cmd>tabnew<CR>',      { desc = 'Opens new tab' })
 
 -- Buffers keymaps
 vim.keymap.set('n', 'gbn', '<cmd>bnext<CR>',   { desc = 'Next buffer' })
@@ -259,7 +255,6 @@ vim.pack.add( {
     'https://github.com/nvim-mini/mini.nvim',                             -- A lot of useful small plugins are setting up 15 lines below
     'https://github.com/nvim-lualine/lualine.nvim',                       -- Lua status line(path, lsp status, etc)
     'https://github.com/ThePrimeagen/vim-be-good',                        -- Small set of games to practice essential Vim motions
-    'https://github.com/ibhagwan/fzf-lua',                                -- Fuzzy findig
     'https://github.com/mason-org/mason.nvim',                            -- Lsp downloading plugin
     'https://github.com/nvim-treesitter/nvim-treesitter',                 -- Treesitter(more accurate highlighting)
     'https://github.com/nvzone/showkeys',                                 -- ShowKeys plugin for showing other people what you are pressing
@@ -324,15 +319,6 @@ require('lualine').setup( {
         lualine_y = {'progress'},
         lualine_z = {'location'}
     },
-} )
-
--- Fzf-lua configuration
-require('fzf-lua').setup( {
-    files = {
-        no_ignore = true, -- now I can see all the ignored files in fzf searching
-    },
-    lazy = false,
-    dependencies = { 'nvim-mini/mini.icons' },
 } )
 
 -- Highlight colors with match color
