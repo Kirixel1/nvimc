@@ -10,48 +10,48 @@
 -- ==========================================================================================================
 
 -- Basic settings
-vim.opt.number         = true                                                  -- Visibility of line numbers
-vim.opt.relativenumber = true                                                  -- Relative number style (for jumping with counters)
-vim.opt.cursorline     = true                                                  -- Highlight current line under the cursor
-vim.opt.scrolloff      = 10                                                    -- Keep 15 lines above/below cursor
-vim.opt.sidescrolloff  = 10                                                    -- Keep 15 columns left/right of cursor
-vim.opt.wrap           = false                                                 -- Off line wrapping
-vim.opt.clipboard      = 'unnamedplus'                                         -- Make system clipboard the same as Neovim registers for more convenient usage of yank/paste
-vim.g.netrw_banner     = false                                                 -- Turn off the banner of the netrw built in explorer
+vim.opt.number         = true                                                         -- Visibility of line numbers
+vim.opt.relativenumber = true                                                         -- Relative number style (for jumping with counters)
+vim.opt.cursorline     = true                                                         -- Highlight current line under the cursor
+vim.opt.scrolloff      = 10                                                           -- Keep 15 lines above/below cursor
+vim.opt.sidescrolloff  = 10                                                           -- Keep 15 columns left/right of cursor
+vim.opt.wrap           = false                                                        -- Off line wrapping
+vim.opt.clipboard      = 'unnamedplus'                                                -- Make system clipboard the same as Neovim registers for more convenient usage of yank/paste
+vim.g.netrw_banner     = false                                                        -- Turn off the banner of the netrw built in explorer
 
 -- Tabbing / indentation
-vim.opt.shiftwidth     = 4                                                     -- Number of spaces to use for each step of indenting
-vim.opt.expandtab      = true                                                  -- Use spaces instead of tabs
-vim.opt.smartindent    = true                                                  -- Smart autoindenting on new lines
-vim.opt.autoindent     = true                                                  -- Copy indent from current line
-vim.opt.cindent        = true                                                  -- Enable c -style indentation
-vim.opt.smarttab       = true                                                  -- Insert appropriate number of spaces on tab
+vim.opt.shiftwidth     = 4                                                            -- Number of spaces to use for each step of indenting
+vim.opt.expandtab      = true                                                         -- Use spaces instead of tabs
+vim.opt.smartindent    = true                                                         -- Smart autoindenting on new lines
+vim.opt.autoindent     = true                                                         -- Copy indent from current line
+vim.opt.cindent        = true                                                         -- Enable c -style indentation
+vim.opt.smarttab       = true                                                         -- Insert appropriate number of spaces on tab
 
 -- Search settings
-vim.opt.smartcase      = true                                                  -- Smart sensitive/not sensitive depending on case of the letter typed
-vim.opt.incsearch      = true                                                  -- Show matches as you type
-vim.opt.ignorecase     = true                                                  -- Ignore case in search patterns
+vim.opt.smartcase      = true                                                         -- Smart sensitive/not sensitive depending on case of the letter typed
+vim.opt.incsearch      = true                                                         -- Show matches as you type
+vim.opt.ignorecase     = true                                                         -- Ignore case in search patterns
 
 -- Visual settings
-vim.opt.termguicolors  = true                                                  -- Enable 24-bit colors for more color range
+vim.opt.termguicolors  = true                                                         -- Enable 24-bit colors for more color range
 
 -- Folding settings
-vim.opt.foldmethod     = 'expr'                                                -- Use expression for folding
-vim.opt.foldexpr       = 'v:lua.vim.treesitter.foldexpr()'                     -- Use treesitter for folding
-vim.opt.foldlevel      = 99                                                    -- Keep all folds open by default
+vim.opt.foldmethod     = 'expr'                                                       -- Use expression for folding
+vim.opt.foldexpr       = 'v:lua.vim.treesitter.foldexpr()'                            -- Use treesitter for folding
+vim.opt.foldlevel      = 99                                                           -- Keep all folds open by default
 
 -- Split behavior
-vim.opt.splitbelow     = true                                                  -- Horizontal splits open below
-vim.opt.splitright     = true                                                  -- Vertical splits open to the right
+vim.opt.splitbelow     = true                                                         -- Horizontal splits open below
+vim.opt.splitright     = true                                                         -- Vertical splits open to the right
 
 -- Disable error sounds
 vim.opt.errorbells     = false
 
 -- Autocompletion options
-vim.opt.complete:append('o')                                                   -- Append omnicompletion to default
-vim.opt.completeopt    = { 'menuone', 'noselect', 'popup' }                    -- Some minor completeopt settings (see ':help completeopt')
-vim.opt.pumborder      = 'single'                                              -- Single line autocompletion border box
-vim.opt.pumheight      = 5                                                     -- Maximum elements of autocompletion
+vim.opt.complete:append('o')                                                          -- Append omnicompletion to default
+vim.opt.completeopt  = { 'menuone', 'noselect', 'popup', 'fuzzy' }                    -- Some minor completeopt settings (see ':help completeopt')
+vim.opt.pumborder    = 'single'                                                       -- Single line autocompletion border box
+vim.opt.pumheight    = 5                                                              -- Maximum elements of autocompletion
 
 -- ==========================================================================================================
 --                                        OPTIONS SECTION END
@@ -94,7 +94,6 @@ vim.keymap.set('n', '<C-Enter>', 'o<Esc>', { desc = 'New line below without swit
 vim.keymap.set('n', '<C-Backspace>', 'O<Esc>', { desc = 'New line above without switchin to insert mode' })
 vim.keymap.set('n', '<C-,>', 'A,<Esc>', { desc = 'Comma at the end of the line' })
 vim.keymap.set('n', '<C-;>', 'A;<Esc>', { desc = 'Dot and comma at the end of the line' })
-vim.keymap.set('i', '<C-Space>', '<C-x><C-o>', { desc = 'Trigger omni completion' })
 
 vim.keymap.set('n', '=wb', function()
     local view = vim.fn.winsaveview()
@@ -273,7 +272,6 @@ vim.cmd('packadd nvim.undotree')          -- Enable undotree butil in plugin(onl
 -- Mini.nvim plugin
 require('mini.align').setup()                       -- Align module
 require('mini.comment').setup()                     -- Comments module
-require('mini.indentscope').setup({ symbol = '|' }) -- Indentscope dashes module
 require('mini.trailspace').setup()                  -- Trailspaces module
 require('mini.icons').setup()                       -- Icons module
 require('mini.operators').setup({                   -- Operators module(mainly for exchanging text regions)
@@ -282,7 +280,6 @@ require('mini.operators').setup({                   -- Operators module(mainly f
         reindent_linewise = true,
     },
 })
-require('mini.surround').setup()                    -- Surround module for surrounding selection with special symbols
 MiniIcons.mock_nvim_web_devicons()                  -- Integrates mini.icons with other plugins that can use icons
 
 -- `HJKL` for moving visual selection (overrides H, L, J in Visual mode)
