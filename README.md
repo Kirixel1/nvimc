@@ -119,13 +119,16 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 
 ### Global
 
-| Key               | Description                         |
-| -----             | -------------                       |
-| `:h[elp] keyword` | open help for keyword               |
-| `:sav[eas] file`  | save file as                        |
-| `:clo[se]`        | close current pane                  |
-| `:ter[minal]`     | open a terminal window              |
-| `K`               | open man page for word under cursor |
+| Key                     | Description                                                 |
+| -----                   | -------------                                               |
+| `:h[elp] keyword`       | open help for keyword                                       |
+| `:sav[eas] file`        | save file as                                                |
+| `:clo[se]`              | close current pane                                          |
+| `:ter[minal]`           | open a terminal window                                      |
+| `:b[uffer] buffer_name` | edit buffer from the buffer list                            |
+| `:fin[d] path_to_file`  | find file in 'path' and then :edit it. see also: 'findfunc' |
+| `:ter[minal]`           | open a terminal window                                      |
+| `K`                     | open man page for word under cursor                         |
 
 ### Macros
 
@@ -391,28 +394,31 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 
 ### Different
 
-| Key                      | Description                                                                                   |
-| -----                    | -------------                                                                                 |
-| `zf`                     | manually define a fold up to motion                                                           |
-| `zd`                     | delete fold under the cursor                                                                  |
-| `za`                     | toggle fold under the cursor                                                                  |
-| `zo`                     | open fold under the cursor                                                                    |
-| `zc`                     | close fold under the cursor                                                                   |
-| `zr`                     | reduce (open) all folds by one level                                                          |
-| `zm`                     | fold more (close) all folds by one level                                                      |
-| `zi`                     | toggle folding functionality                                                                  |
-| `]c`                     | jump to start of next change                                                                  |
-| `[c`                     | jump to start of previous change                                                              |
-| `do`                     | obtain (get) difference (from other buffer)                                                   |
-| `dp`                     | put difference (to other buffer)                                                              |
-| `:diffthis`              | make current window part of diff                                                              |
-| `:dif`                   | update differences                                                                            |
-| `:diffoff`               | switch off diff mode for current window                                                       |
-| `:read[r] file.c`        | inserts the text from the file.c                                                              |
-| `:r !shell_command`      | inserts the output info from the shell_command                                                |
-| `:put x`                 | put the text from register x after the cursor                                                 |
-| `:reg`                   | open register contents history                                                                |
-| `Ctrl+f in command mode` | opens additional buffer when you can continue to type commands with all the motions available |
+| Key                      | Description                                                                                                                       |
+| -----                    | -------------                                                                                                                     |
+| `zf`                     | manually define a fold up to motion                                                                                               |
+| `zd`                     | delete fold under the cursor                                                                                                      |
+| `za`                     | toggle fold under the cursor                                                                                                      |
+| `zo`                     | open fold under the cursor                                                                                                        |
+| `zc`                     | close fold under the cursor                                                                                                       |
+| `zr`                     | reduce (open) all folds by one level                                                                                              |
+| `zm`                     | fold more (close) all folds by one level                                                                                          |
+| `zi`                     | toggle folding functionality                                                                                                      |
+| `]c`                     | jump to start of next change                                                                                                      |
+| `[c`                     | jump to start of previous change                                                                                                  |
+| `do`                     | obtain (get) difference (from other buffer)                                                                                       |
+| `dp`                     | put difference (to other buffer)                                                                                                  |
+| `:diffthis`              | make current window part of diff                                                                                                  |
+| `:dif`                   | update differences                                                                                                                |
+| `:diffoff`               | switch off diff mode for current window                                                                                           |
+| `:read[r] file.c`        | inserts the text from the file.c                                                                                                  |
+| `:r !shell_command`      | inserts the output info from the shell_command                                                                                    |
+| `:put x`                 | put the text from register x after the cursor                                                                                     |
+| `:reg`                   | open register contents history                                                                                                    |
+| `Ctrl+f in command mode` | opens additional buffer when you can continue to type commands with all the motions available                                     |
+| `ctrl+]`                 | jump to the definition of the keyword under the cursor. same as ":tag {name}", where {name} is the keyword under or after cursor. |
+| `ctrl+t`                 | jump to count older entry in the tag stack                                                                                        |
+| `g]`                     | like ctrl-], but use ":tselect" instead of ":tag"                                                                                 |
 
 
 ### Documentation commands(Mostly multi repeat/search and replace/patterns topics)
