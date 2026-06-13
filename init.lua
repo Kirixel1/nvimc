@@ -205,13 +205,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
         end
 
         -- Professional development keymaps
-        map('gd', vim.lsp.buf.definition, 'Goto Definition')
-        map('gr', vim.lsp.buf.references, 'Goto References')
-        map('gI', vim.lsp.buf.implementation, 'Goto Implementation')
-        map('<leader>D', vim.lsp.buf.type_definition, 'Type Definition')
         map('<leader>rn', vim.lsp.buf.rename, 'Rename')
         map('K', function() vim.lsp.buf.hover({ border = 'single', max_height = 25, max_width = 120 }) end, 'Hover Documentation')
-        map('gD', vim.lsp.buf.declaration, 'Goto Declaration')
 
         -- Diagnostic keymaps
         map('<leader>d', vim.diagnostic.open_float, 'Open Diagnostic Float')
