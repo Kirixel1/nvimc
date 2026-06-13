@@ -10,48 +10,48 @@
 -- ==========================================================================================================
 
 -- Basic settings
-vim.opt.number = true                                                -- Visibility of line numbers
-vim.opt.relativenumber = true                                        -- Relative number style (for jumping with counters)
-vim.opt.cursorline = true                                            -- Highlight current line under the cursor
-vim.opt.scrolloff = 10                                               -- Keep 15 lines above/below cursor
-vim.opt.sidescrolloff = 10                                           -- Keep 15 columns left/right of cursor
-vim.opt.wrap = false                                                 -- Off line wrapping
-vim.opt.clipboard = 'unnamedplus'                                    -- Make system clipboard the same as Neovim registers for more convenient usage of yank/paste
-vim.g.netrw_banner = false                                           -- Turn off the banner of the netrw built in explorer
+vim.opt.number         = true                                                  -- Visibility of line numbers
+vim.opt.relativenumber = true                                                  -- Relative number style (for jumping with counters)
+vim.opt.cursorline     = true                                                  -- Highlight current line under the cursor
+vim.opt.scrolloff      = 10                                                    -- Keep 15 lines above/below cursor
+vim.opt.sidescrolloff  = 10                                                    -- Keep 15 columns left/right of cursor
+vim.opt.wrap           = false                                                 -- Off line wrapping
+vim.opt.clipboard      = 'unnamedplus'                                         -- Make system clipboard the same as Neovim registers for more convenient usage of yank/paste
+vim.g.netrw_banner     = false                                                 -- Turn off the banner of the netrw built in explorer
 
 -- Tabbing / indentation
-vim.opt.shiftwidth = 4                                               -- Number of spaces to use for each step of indenting
-vim.opt.expandtab = true                                             -- Use spaces instead of tabs
-vim.opt.smartindent = true                                           -- Smart autoindenting on new lines
-vim.opt.autoindent = true                                            -- Copy indent from current line
-vim.opt.cindent = true                                               -- Enable c-style indentation
-vim.opt.smarttab = true                                              -- Insert appropriate number of spaces on tab
+vim.opt.shiftwidth     = 4                                                     -- Number of spaces to use for each step of indenting
+vim.opt.expandtab      = true                                                  -- Use spaces instead of tabs
+vim.opt.smartindent    = true                                                  -- Smart autoindenting on new lines
+vim.opt.autoindent     = true                                                  -- Copy indent from current line
+vim.opt.cindent        = true                                                  -- Enable c -style indentation
+vim.opt.smarttab       = true                                                  -- Insert appropriate number of spaces on tab
 
 -- Search settings
-vim.opt.smartcase = true                                             -- Smart sensitive/not sensitive depending on case of the letter typed
-vim.opt.incsearch = true                                             -- Show matches as you type
-vim.opt.ignorecase = true                                            -- Ignore case in search patterns
+vim.opt.smartcase      = true                                                  -- Smart sensitive/not sensitive depending on case of the letter typed
+vim.opt.incsearch      = true                                                  -- Show matches as you type
+vim.opt.ignorecase     = true                                                  -- Ignore case in search patterns
 
 -- Visual settings
-vim.opt.termguicolors = true                                         -- Enable 24-bit colors for more color range
+vim.opt.termguicolors  = true                                                  -- Enable 24-bit colors for more color range
 
 -- Folding settings
-vim.opt.foldmethod = 'expr'                                          -- Use expression for folding
-vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'                 -- Use treesitter for folding
-vim.opt.foldlevel = 99                                               -- Keep all folds open by default
+vim.opt.foldmethod     = 'expr'                                                -- Use expression for folding
+vim.opt.foldexpr       = 'v:lua.vim.treesitter.foldexpr()'                     -- Use treesitter for folding
+vim.opt.foldlevel      = 99                                                    -- Keep all folds open by default
 
 -- Split behavior
-vim.opt.splitbelow = true                                            -- Horizontal splits open below
-vim.opt.splitright = true                                            -- Vertical splits open to the right
+vim.opt.splitbelow     = true                                                  -- Horizontal splits open below
+vim.opt.splitright     = true                                                  -- Vertical splits open to the right
 
 -- Disable error sounds
-vim.opt.errorbells = false
+vim.opt.errorbells     = false
 
 -- Autocompletion options
-vim.opt.complete:append('o')                                         -- Append omnicompletion to default
-vim.opt.completeopt = { 'menuone', 'noselect', 'popup' }             -- Some minor completeopt settings (see ':help completeopt')
-vim.opt.pumborder = 'single'                                         -- Single line autocompletion border box
-vim.opt.pumheight = 5                                                -- Maximum elements of autocompletion
+vim.opt.complete:append('o')                                                   -- Append omnicompletion to default
+vim.opt.completeopt    = { 'menuone', 'noselect', 'popup' }                    -- Some minor completeopt settings (see ':help completeopt')
+vim.opt.pumborder      = 'single'                                              -- Single line autocompletion border box
+vim.opt.pumheight      = 5                                                     -- Maximum elements of autocompletion
 
 -- ==========================================================================================================
 --                                        OPTIONS SECTION END
@@ -64,29 +64,24 @@ vim.opt.pumheight = 5                                                -- Maximum 
 
 -- Leader mappings
 vim.g.mapleader = ' '
-vim.keymap.set('n', '<leader>pv', '<cmd>Ex<CR>', { desc = 'Open netrw built in Neovim file explorer' })
-vim.keymap.set('n', '<leader>sk', '<cmd>ShowkeysToggle<CR>', { desc = 'Show keys in the down-center of the screen' })
-vim.keymap.set('n', '<leader>O', 'o<esc>kO<Esc>j', { desc = 'Add empty lines' })
+vim.keymap.set('n', '<leader>pv', '<cmd>Ex<CR>',                                 { desc = 'Open netrw built in Neovim file explorer' })
+vim.keymap.set('n', '<leader>sk', '<cmd>ShowkeysToggle<CR>',                     { desc = 'Show keys in the down-center of the screen' })
+vim.keymap.set('n', '<leader>O',  'o<esc>kO<Esc>j',                              { desc = 'Add empty lines' })
+vim.keymap.set('n', '<leader>cm', '<cmd>Compile<CR>',                            { desc = 'Enters compilation mode' })
+vim.keymap.set('n', '<leader>ff', function() require('fzf-lua').files() end,     { desc = 'FZF find files in the current directory' })
+vim.keymap.set('n', '<leader>fg', function() require('fzf-lua').live_grep() end, { desc = 'FZF live grep' })
+vim.keymap.set('n', '<leader>fb', function() require('fzf-lua').buffers() end,   { desc = 'FZF buffers' })
+vim.keymap.set('n', '<leader>fh', function() require('fzf-lua').help_tags() end, { desc = 'FZF help tags' })
 
-vim.keymap.set('n', '<leader>ff', function()
-    require('fzf-lua').files()
-end, { desc = 'FZF find files in the current directory' })
+-- Tabs keymaps
+vim.keymap.set('n', '<leader>nt', '<cmd>tabnext<CR>',     { desc = 'Next tab' })
+vim.keymap.set('n', '<leader>pt', '<cmd>tabprevious<CR>', { desc = 'Previous tab' })
+vim.keymap.set('n', '<leader>ct', '<cmd>tabclose<CR>',    { desc = 'Close tab' })
+vim.keymap.set('n', '<leader>ot', '<cmd>tabnew<CR>',      { desc = 'Opens new tab' })
 
-vim.keymap.set('n', '<leader>fg', function()
-    require('fzf-lua').live_grep()
-end, { desc = 'FZF live grep' })
-
-vim.keymap.set('n', '<leader>fb', function()
-    require('fzf-lua').buffers()
-end, { desc = 'FZF buffers' })
-
-vim.keymap.set('n', '<leader>fh', function()
-    require('fzf-lua').help_tags()
-end, { desc = 'FZF help tags' })
-
--- Buffer switching
-vim.keymap.set('n', 'gbn', '<cmd>bnext<CR>', { desc = 'Next buffer' })
-vim.keymap.set('n', 'gbp', '<cmd>bprev<CR>', { desc = 'Previous buffer' })
+-- Buffers keymaps
+vim.keymap.set('n', 'gbn', '<cmd>bnext<CR>',   { desc = 'Next buffer' })
+vim.keymap.set('n', 'gbp', '<cmd>bprev<CR>',   { desc = 'Previous buffer' })
 vim.keymap.set('n', 'gbd', '<cmd>bdelete<CR>', { desc = 'Delete buffer' })
 
 -- Improved scrolling
