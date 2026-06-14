@@ -84,15 +84,16 @@ Leader key = `<Space>`
 
 ### Mini.nvim Mappings
 
-| Key                       | Mode   | Action                           |
-| -----                     | ------ | --------                         |
-| `gcc`                     | Normal | Toggle comment (MiniComment)     |
-| `gc`                      | Visual | Toggle comment (MiniComment)     |
-| `H`                       | Visual | Move selection left (MiniMove)   |
-| `L`                       | Visual | Move selection right (MiniMove)  |
-| `J`                       | Visual | Move selection down (MiniMove)   |
-| `K`                       | Visual | Move selection up (MiniMove)     |
-| `ga + character to align` | Visual | Align text by character to align |
+| Key                       | Mode          | Action                           |
+| -----                     | ------        | --------                         |
+| `gcc`                     | Normal        | Toggle comment (MiniComment)     |
+| `gc`                      | Visual        | Toggle comment (MiniComment)     |
+| `H`                       | Visual        | Move selection left (MiniMove)   |
+| `L`                       | Visual        | Move selection right (MiniMove)  |
+| `J`                       | Visual        | Move selection down (MiniMove)   |
+| `K`                       | Visual        | Move selection up (MiniMove)     |
+| `ga + character to align` | Visual/Normal | Align text by character to align |
+| `gX`                      | Visual/Normal | Exchanging text regions          |
 
 ### Fun stuff
 So when you're using arrow keys it prints skill issue cause you use vim!
