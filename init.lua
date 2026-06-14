@@ -298,17 +298,17 @@ require('lualine').setup( {
 
     options = {
         globalstatus = true, -- Set one global lualine for all the windows(even if you have multiple splits)
-        component_separators = { left = '|', right = '|' },
+        component_separators = { left = '', right = '' },
         section_separators = { left = '',    right = '' },
     },
 
     sections = {
-        lualine_a = {'mode'},
-        lualine_b = {'diff', 'diagnostics'},
+        lualine_a = { 'mode' },
+        lualine_b = { 'diff' },
         lualine_c = { { 'filename', path = 1 } },
         lualine_x = { },
-        lualine_y = {'progress'},
-        lualine_z = {'location'}
+        lualine_y = { 'progress' },
+        lualine_z = { 'location' }
     },
 } )
 
