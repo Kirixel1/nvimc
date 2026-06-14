@@ -1,123 +1,71 @@
 -- ==================================================================================================================
 --   Welcome to my personal configuration of Neovim in a single init.lua file! (only for version of Neovim 0.12.0+).
---   My configuration is divided by sections with keywords (END/BEGIN), for better navigation in the file.
 --   All well documented, so anyone can understand what each option and setting means.
 -- ==================================================================================================================
 
-
--- ==========================================================================================================
---                                              OPTIONS SECTION BEGIN
--- ==========================================================================================================
-
--- Basic settings
+-- Basic .opt settings
 vim.opt.number         = true                                                         -- Visibility of line numbers
 vim.opt.relativenumber = true                                                         -- Relative number style (for jumping with counters)
 vim.opt.cursorline     = true                                                         -- Highlight current line under the cursor
-vim.opt.scrolloff      = 10                                                           -- Keep 15 lines above/below cursor
-vim.opt.sidescrolloff  = 10                                                           -- Keep 15 columns left/right of cursor
+vim.opt.scrolloff      = 10                                                           -- Keep 10 lines above/below cursor
+vim.opt.sidescrolloff  = 10                                                           -- Keep 10 columns left/right of cursor
 vim.opt.wrap           = false                                                        -- Off line wrapping
-vim.opt.clipboard      = 'unnamedplus'                                                -- Make system clipboard the same as Neovim registers for more convenient usage of yank/paste
+vim.opt.clipboard      = 'unnamedplus'                                                -- Makes clipboard behaviour natural
 vim.g.netrw_banner     = false                                                        -- Turn off the banner of the netrw built in explorer
-
--- Tabbing / indentation
 vim.opt.shiftwidth     = 4                                                            -- Number of spaces to use for each step of indenting
 vim.opt.expandtab      = true                                                         -- Use spaces instead of tabs
 vim.opt.smartindent    = true                                                         -- Smart autoindenting on new lines
 vim.opt.autoindent     = true                                                         -- Copy indent from current line
 vim.opt.cindent        = true                                                         -- Enable c -style indentation
 vim.opt.smarttab       = true                                                         -- Insert appropriate number of spaces on tab
-
--- Search settings
 vim.opt.smartcase      = true                                                         -- Smart sensitive/not sensitive depending on case of the letter typed
 vim.opt.incsearch      = true                                                         -- Show matches as you type
 vim.opt.ignorecase     = true                                                         -- Ignore case in search patterns
-
--- Visual settings
 vim.opt.termguicolors  = true                                                         -- Enable 24-bit colors for more color range
-
--- Folding settings
 vim.opt.foldmethod     = 'expr'                                                       -- Use expression for folding
 vim.opt.foldexpr       = 'v:lua.vim.treesitter.foldexpr()'                            -- Use treesitter for folding
 vim.opt.foldlevel      = 99                                                           -- Keep all folds open by default
-
--- Split behavior
 vim.opt.splitbelow     = true                                                         -- Horizontal splits open below
 vim.opt.splitright     = true                                                         -- Vertical splits open to the right
-
--- Disable error sounds
-vim.opt.errorbells     = false
-
--- Autocompletion options
+vim.opt.errorbells     = false                                                        -- Disable error sounds
 vim.opt.complete:append('o')                                                          -- Append omnicompletion to default
 vim.opt.completeopt    = { 'menuone', 'noselect', 'popup', 'fuzzy' }                  -- Some minor completeopt settings (see ':help completeopt')
 vim.opt.pumborder      = 'single'                                                     -- Single line autocompletion border box
 vim.opt.pumheight      = 5                                                            -- Maximum elements of autocompletion
 
--- ==========================================================================================================
---                                        OPTIONS SECTION END
--- ==========================================================================================================
-
-
--- ==========================================================================================================
---                                        KEYMAPS SECTION BEGIN
--- ==========================================================================================================
-
--- Leader mappings
+-- Key maps
 vim.g.mapleader = ' '
 vim.keymap.set('n', '<leader>pv', '<cmd>Ex<CR>',             { desc = 'Open netrw built in Neovim file explorer' })
 vim.keymap.set('n', '<leader>sk', '<cmd>ShowkeysToggle<CR>', { desc = 'Show keys in the down-center of the screen' })
 vim.keymap.set('n', '<leader>O',  'o<esc>kO<Esc>j',          { desc = 'Add empty lines' })
 vim.keymap.set('n', '<leader>cm', '<cmd>Compile<CR>',        { desc = 'Enters compilation mode' })
-
--- Tabs keymaps
-vim.keymap.set('n', '<leader>tn', '<cmd>tabnext<CR>',     { desc = 'Next tab' })
-vim.keymap.set('n', '<leader>tp', '<cmd>tabprevious<CR>', { desc = 'Previous tab' })
-vim.keymap.set('n', '<leader>tc', '<cmd>tabclose<CR>',    { desc = 'Close tab' })
-vim.keymap.set('n', '<leader>to', '<cmd>tabnew<CR>',      { desc = 'Opens new tab' })
-
--- Buffers keymaps
-vim.keymap.set('n', 'gbn', '<cmd>bnext<CR>',   { desc = 'Next buffer' })
-vim.keymap.set('n', 'gbp', '<cmd>bprev<CR>',   { desc = 'Previous buffer' })
-vim.keymap.set('n', 'gbd', '<cmd>bdelete<CR>', { desc = 'Delete buffer' })
-
--- Improved scrolling
-vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Scroll down and center' })
-vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Scroll up and center' })
-
--- Improved next match
-vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Next search result and center, also opens folded code if it was folded' })
-vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Previous search result and center, also opens folded code if it was folded' })
-
--- Stuff for convenience
-vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Terminal: switch to normal mode' })
-vim.keymap.set('n', '<C-Enter>', 'o<Esc>', { desc = 'New line below without switchin to insert mode' })
-vim.keymap.set('n', '<C-Backspace>', 'O<Esc>', { desc = 'New line above without switchin to insert mode' })
-vim.keymap.set('n', '<C-,>', 'A,<Esc>', { desc = 'Comma at the end of the line' })
-vim.keymap.set('n', '<C-;>', 'A;<Esc>', { desc = 'Dot and comma at the end of the line' })
-vim.keymap.set('n', '<Esc>', '<Cmd>nohlsearch<CR>', { noremap = true, silent = true, desc = 'Clear search highlight on Escape' })
-
+vim.keymap.set('n', '<leader>tn', '<cmd>tabnext<CR>',        { desc = 'Next tab' })
+vim.keymap.set('n', '<leader>tp', '<cmd>tabprevious<CR>',    { desc = 'Previous tab' })
+vim.keymap.set('n', '<leader>tc', '<cmd>tabclose<CR>',       { desc = 'Close tab' })
+vim.keymap.set('n', '<leader>to', '<cmd>tabnew<CR>',         { desc = 'Opens new tab' })
+vim.keymap.set('n', 'gbn', '<cmd>bnext<CR>',                 { desc = 'Next buffer' })
+vim.keymap.set('n', 'gbp', '<cmd>bprev<CR>',                 { desc = 'Previous buffer' })
+vim.keymap.set('n', 'gbd', '<cmd>bdelete<CR>',               { desc = 'Delete buffer' })
+vim.keymap.set('n', '<C-d>', '<C-d>zz',                      { desc = 'Scroll down and center' })
+vim.keymap.set('n', '<C-u>', '<C-u>zz',                      { desc = 'Scroll up and center' })
+vim.keymap.set('n', 'n', 'nzzzv',                            { desc = 'Next search result and center, also opens folded code if it was folded' })
+vim.keymap.set('n', 'N', 'Nzzzv',                            { desc = 'Previous search result and center, also opens folded code if it was folded' })
+vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>',             { desc = 'Terminal: switch to normal mode' })
+vim.keymap.set('n', '<C-Enter>', 'o<Esc>',                   { desc = 'New line below without switchin to insert mode' })
+vim.keymap.set('n', '<C-Backspace>', 'O<Esc>',               { desc = 'New line above without switchin to insert mode' })
+vim.keymap.set('n', '<C-,>', 'A,<Esc>',                      { desc = 'Comma at the end of the line' })
+vim.keymap.set('n', '<C-;>', 'A;<Esc>',                      { desc = 'Dot and comma at the end of the line' })
+vim.keymap.set('n', '<Esc>', '<Cmd>nohlsearch<CR>',          { noremap = true, silent = true, desc = 'Clear search highlight on Escape' })
+vim.keymap.set('n', '<A-l>', '<cmd>vertical resize -9<CR>',  { desc = 'Resize left' })
+vim.keymap.set('n', '<A-j>', '<cmd>resize +6<CR>',           { desc = 'Resize down' })
+vim.keymap.set('n', '<A-k>', '<cmd>resize -6<CR>',           { desc = 'Resize up' })
+vim.keymap.set('n', '<A-h>', '<cmd>vertical resize +9<CR>',  { desc = 'Resize right' })
 vim.keymap.set('n', '=wb', function()
     local view = vim.fn.winsaveview()
     vim.cmd('normal! gg=G')
     vim.cmd('lua MiniTrailspace.trim()')
     vim.fn.winrestview(view)
-end, { desc = 'Reindent all the text in a file and delete all trailing spaces (unnecessary spaces)' })
-
--- Window management remaps
-vim.keymap.set('n', '<A-l>', '<cmd>vertical resize -9<CR>', { desc = 'Resize left' })
-vim.keymap.set('n', '<A-j>', '<cmd>resize +6<CR>', { desc = 'Resize down' })
-vim.keymap.set('n', '<A-k>', '<cmd>resize -6<CR>', { desc = 'Resize up' })
-vim.keymap.set('n', '<A-h>', '<cmd>vertical resize +9<CR>', { desc = 'Resize right' })
-
-
--- ==========================================================================================================
---                                        KEYMAPS SECTION END
--- ==========================================================================================================
-
-
--- ==========================================================================================================
---                                    AUTOCOMMANDS SECTION BEGIN
--- ==========================================================================================================
+end,                                                         { desc = 'Reindent all the text in a file and delete all trailing spaces (unnecessary spaces)' })
 
 -- Highlight yanked text
 vim.api.nvim_create_autocmd('TextYankPost', {
@@ -150,98 +98,6 @@ vim.api.nvim_create_autocmd('FileType', {
     end,
 })
 
--- ==========================================================================================================
---                                    AUTOCOMMANDS SECTION END
--- ==========================================================================================================
-
-
--- ==========================================================================================================
---                                      LSP SECTION BEGIN
--- ==========================================================================================================
-
--- Servers setup
--- C and C++ language server
-vim.lsp.config['clangd'] = {
-    cmd = { 'clangd' },
-    filetypes = { 'c', 'cpp' }
-}
-
--- Assembly LSP
-vim.lsp.config['asm-lsp'] = {
-    cmd = { 'asm-lsp' },
-    filetypes = { 'asm' }
-}
-
--- Lua language server
-vim.lsp.config['lua_ls'] = {
-    cmd = { 'lua-language-server' },
-    filetypes = { 'lua' },
-    root_markers = { '.luarc.json', '.luarc.jsonc', '.git' },
-    settings = {
-        Lua = {
-            diagnostics = {
-                globals = { 'vim', 'MiniIcons' },
-                disable = { 'inject-field', 'undefined-field', 'missing-fields' },
-            },
-            runtime = { version = 'LuaJIT' },
-            workspace = {
-                library = { vim.env.VIMRUNTIME },
-                checkThirdParty = false,
-            },
-            telemetry = { enable = false },
-        },
-    },
-}
-
--- LSP keymaps
-vim.api.nvim_create_autocmd('LspAttach', {
-    group = vim.api.nvim_create_augroup('lsp-attach', { clear = true }),
-    callback = function(event)
-        local client = vim.lsp.get_client_by_id(event.data.client_id)
-        if not client then return end
-
-        local map = function(keys, func, desc)
-            vim.keymap.set('n', keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
-        end
-
-        -- Professional development keymaps
-        map('<leader>rn', vim.lsp.buf.rename, 'Rename')
-        map('K', function() vim.lsp.buf.hover({ border = 'single', max_height = 25, max_width = 120 }) end, 'Hover Documentation')
-
-        -- Diagnostic keymaps
-        map('<leader>d', vim.diagnostic.open_float, 'Open Diagnostic Float')
-        map('[d', function() vim.diagnostic.jump({ count = -1, float = true }) end, 'Previous Diagnostic')
-        map(']d', function() vim.diagnostic.jump({ count = 1, float = true }) end, 'Next Diagnostic')
-        map('<leader>q', vim.diagnostic.setqflist, 'Open Diagnostic Quickfix')
-        map('gK', function()
-            local new_config = not vim.diagnostic.config().virtual_lines
-            vim.diagnostic.config({ virtual_lines = new_config })
-        end, 'Toggle diagnostic virtual_lines' )
-    end,
-})
-
-
-
--- Diagnostic config
-vim.diagnostic.config({
-    -- Floating diagnostic window border style
-    float = {
-        border = 'single',
-    },
-})
-
--- Enabling all LSPs
-vim.lsp.enable( {'clangd', 'lua_ls', 'asm-lsp' } )
-
--- ==========================================================================================================
---                                      LSP SECTION END
--- ==========================================================================================================
-
-
--- ==========================================================================================================
---                                   PLUGINS SECTION BEGIN
--- ==========================================================================================================
-
 -- Download plugins with built in package manager of Neovim
 vim.pack.add( {
     'https://github.com/blazkowolf/gruber-darker.nvim',                   -- Colorscheme
@@ -259,11 +115,8 @@ vim.pack.add( {
     'https://github.com/nvim-lua/plenary.nvim',                           -- That's dependency for compilation mode plugin and some others, like Neogit also
 } )
 
--- Setup configuration for plugins
-vim.cmd.colorscheme('gruber-darker')      -- Enable gruber-darker colorscheme
-vim.cmd('packadd nvim.undotree')          -- Enable undotree butil in plugin(only in Neovim 0.12+)
-
--- Mini.nvim plugin
+vim.cmd('packadd nvim.undotree')                    -- Enable undotree butil in plugin(only in Neovim 0.12+)
+vim.cmd.colorscheme('gruber-darker')                -- Enable gruber-darker colorscheme
 require('mini.align').setup()                       -- Align module
 require('mini.comment').setup()                     -- Comments module
 require('mini.trailspace').setup()                  -- Trailspaces module
@@ -277,7 +130,6 @@ require('mini.operators').setup({                   -- Operators module(mainly f
 MiniIcons.mock_nvim_web_devicons()                  -- Integrates mini.icons with other plugins that can use icons
 
 -- `HJKL` for moving visual selection (overrides H, L, J in Visual mode)
--- Mini move module for moving sections of code
 require('mini.move').setup({
     mappings = {
         left  = 'H',
@@ -312,13 +164,9 @@ require('lualine').setup( {
     },
 } )
 
--- Highlight colors with match color
+require('neogit').setup()
 require('nvim-highlight-colors').setup()
-
--- Mason configuration (empty/just setup)
 require('mason').setup()
-
--- Tree-sitter configuration
 require('nvim-treesitter').setup({
     sync_install = false, -- Disable sync install of parsers
     auto_install = true, -- Automatically installs missing Treesitter language parsers when you open a file for which the parser is not yet installed
@@ -363,7 +211,7 @@ vim.g.compile_mode = {
     error_regexp_table = {},
     error_ignore_file_list = {},
     error_threshold = require('compile-mode').level.WARNING,
-    auto_jump_to_first_error = true,
+    auto_jump_to_first_error = false,
     error_locus_highlight = 500,
     use_diagnostics = false,
     recompile_no_fail = false,
@@ -392,34 +240,6 @@ require('showkeys').setup({
     },
 })
 
--- Neogit setup
-require('neogit').setup()
-
--- ==========================================================================================================
---                                      ADDITIONAL TWEAKS SECTION BEGIN
--- ==========================================================================================================
-
--- Setting up highlight groups for diagnostic underlines (after loaded theme)
-vim.api.nvim_set_hl(0, 'DiagnosticUnderlineError', {
-    sp = '#ff2400',
-    underline = true,
-})
-
-vim.api.nvim_set_hl(0, 'DiagnosticUnderlineWarn', {
-    sp = '#ffdd00',
-    underline = true,
-})
-
-vim.api.nvim_set_hl(0, 'DiagnosticUnderlineInfo', {
-    sp = '#46a0ff',
-    underline = true,
-})
-
-vim.api.nvim_set_hl(0, 'DiagnosticUnderlineHint', {
-    sp = '#73c936',
-    underline = true,
-})
-
 -- Skill issue?(Disabling arrow keys, so when you try to use them Neovim gonna bulling you with skill issue question <3)
 local noarrows = true
 
@@ -435,6 +255,3 @@ if noarrows == true then
 
 end
 
--- ==========================================================================================================
---                         END OF THE CONFIG AND ALSO END OF THE ADDITIONAL SECTION
--- ==========================================================================================================
