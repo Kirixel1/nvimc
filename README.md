@@ -16,18 +16,19 @@ Some of the keymaps taked from [vim.rtorr.com](https://vim.rtorr.com/) and also 
 
 Leader key = `<Space>`
 
-| Key          | Action                | Description                        |
-| -----        | --------              | -------------                      |
-| `<leader>pv` | `:Ex`                 | Open netrw file explorer           |
-| `<leader>sk` | `:ShowkeysToggle`     | Toggle showkeys widget             |
-| `<leader>O`  | `o<Esc>kO<Esc>j`      | Add empty lines                    |
-| `<leader>o`  | `init_selection`      | Initialize incremental selection   |
-| `<leader>i`  | `increment_node`      | Incrementing initialized selection |
-| `<leader>d`  | `decrement_node`      | Decrementing initialized selection |
-| `<leader>tn` | `tabnext`             | Next tab                           |
-| `<leader>tp` | `tabprevious`         | Previous tab                       |
-| `<leader>tc` | `tabclose`            | Close tab                          |
-| `<leader>to` | `tabnew`              | Opens new tab                      |
+| Key          | Action                               | Description                        |
+| -----        | --------                             | -------------                      |
+| `<leader>pv` | `:Ex`                                | Open netrw file explorer           |
+| `<leader>sk` | `:ShowkeysToggle`                    | Toggle showkeys widget             |
+| `<leader>O`  | `o<Esc>kO<Esc>j`                     | Add empty lines                    |
+| `<leader>o`  | `init_selection`                     | Initialize incremental selection   |
+| `<leader>i`  | `increment_node`                     | Incrementing initialized selection |
+| `<leader>d`  | `decrement_node`                     | Decrementing initialized selection |
+| `<leader>tn` | `tabnext`                            | Next tab                           |
+| `<leader>tp` | `tabprevious`                        | Previous tab                       |
+| `<leader>tc` | `tabclose`                           | Close tab                          |
+| `<leader>to` | `tabnew`                             | Opens new tab                      |
+| `<leader>ts` | `<cmd>lua MiniTrailspace.trim()<CR>` | Trim redundant spaces              |
 
 ### Buffer Switching
 
