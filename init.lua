@@ -37,7 +37,7 @@ vim.opt.pumheight      = 5                                                      
 
 -- Key maps
 vim.g.mapleader = ' '
-vim.keymap.set('n', '<leader>pv', '<cmd>Ex<CR>',                                       { desc = 'Open netrw built in Neovim file explorer' })
+vim.keymap.set('n', '<leader>pv', '<cmd>Dired<CR>',                                    { desc = 'Opens dired file manager' })
 vim.keymap.set('n', '<leader>sk', '<cmd>ShowkeysToggle<CR>',                           { desc = 'Show keys in the down-center of the screen' })
 vim.keymap.set('n', '<leader>O',  'o<esc>kO<Esc>j',                                    { desc = 'Add empty lines' })
 vim.keymap.set('n', '<leader>cm', '<cmd>Compile<CR>',                                  { desc = 'Enters compilation mode' })
@@ -115,6 +115,8 @@ vim.pack.add( {
     'https://github.com/shushtain/nvim-treesitter-incremental-selection', -- Return back incremental selection function from treesitter plugin
     'https://github.com/ej-shafran/compile-mode.nvim',                    -- Compilation mode plugin like in Emacs
     'https://github.com/nvim-lua/plenary.nvim',                           -- That's dependency for compilation mode plugin and some others, like Neogit also
+    'https://github.com/X3eRo0/dired.nvim',                               -- Dired like file managament similar to Emacs
+    'https://github.com/MunifTanjim/nui.nvim',                            -- Dependency for dired.nvim
 } )
 
 vim.cmd('packadd nvim.undotree')                    -- Enable undotree butil in plugin(only in Neovim 0.12+)
@@ -167,6 +169,7 @@ require('lualine').setup( {
 } )
 
 require('neogit').setup()
+require('dired').setup({})
 require('nvim-highlight-colors').setup()
 require('nvim-treesitter').setup({
     sync_install = false, -- Disable sync install of parsers
