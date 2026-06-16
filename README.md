@@ -178,6 +178,8 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 | `Ctrl+f`      | move screen down one page (cursor to first line)                      |
 | `Ctrl+d`      | move cursor and screen down 1/2 page                                  |
 | `Ctrl+u`      | move cursor and screen up 1/2 page                                    |
+| `Ctrl+i`      | go to newer cursor position in jump list                              |
+| `Ctrl+o`      | go to older cursor position in jump list                              |
 
 ### Insert mode
 
@@ -409,6 +411,8 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 | `Ctrl+]`                 | jump to the definition of the keyword under the cursor. same as ":tag {name}", where {name} is the keyword under or after cursor. |
 | `Ctrl+T`                 | jump to count older entry in the tag stack                                                                                        |
 | `g]`                     | like ctrl-], but use ":tselect" instead of ":tag"                                                                                 |
+| `gx`                     | opens the current filepath, URL                                                                                                   |
+| `gf`                     | edit the file whose name is under or after the cursor. Mnemonic: "goto file"                                                      |
 
 
 ### Documentation commands(Mostly multi repeat/search and replace/patterns topics)
