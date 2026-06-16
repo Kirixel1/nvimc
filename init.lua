@@ -45,6 +45,7 @@ vim.keymap.set('n', '<leader>tn', '<cmd>tabnext<CR>',                           
 vim.keymap.set('n', '<leader>tp', '<cmd>tabprevious<CR>',                              { desc = 'Previous tab' })
 vim.keymap.set('n', '<leader>tc', '<cmd>tabclose<CR>',                                 { desc = 'Close tab' })
 vim.keymap.set('n', '<leader>to', '<cmd>tabnew<CR>',                                   { desc = 'Opens new tab' })
+vim.keymap.set({'v', 'n'}, '<leader>mm', '<cmd>MCstart<CR>',                           { desc = 'Enters multicursor mode' })
 vim.keymap.set({'v', 'n'}, '<leader>ts', '<cmd>lua MiniTrailspace.trim()<CR>',         { desc = 'Trim redundant spaces' })
 vim.keymap.set('n', 'gbn', '<cmd>bnext<CR>',                                           { desc = 'Next buffer' })
 vim.keymap.set('n', 'gbp', '<cmd>bprev<CR>',                                           { desc = 'Previous buffer' })
@@ -109,6 +110,8 @@ vim.pack.add( {
     'https://github.com/nvim-lua/plenary.nvim',                           -- That's dependency for compilation mode plugin and some others, like Neogit also
     'https://github.com/X3eRo0/dired.nvim',                               -- Dired like file managament similar to Emacs
     'https://github.com/MunifTanjim/nui.nvim',                            -- Dependency for dired.nvim
+    'https://github.com/smoka7/multicursors.nvim',                        -- Multicursors plugin
+    'https://github.com/nvimtools/hydra.nvim',                            -- Dependency for multicursor plugin
 } )
 
 vim.cmd('packadd nvim.undotree')                    -- Enable undotree butil in plugin(only in Neovim 0.12+)
@@ -236,18 +239,8 @@ require('showkeys').setup({
     },
 })
 
--- Skill issue?(Disabling arrow keys, so when you try to use them Neovim gonna bulling you with skill issue question <3)
-local noarrows = true
-
-if noarrows == true then
-    local skillissue = function()
-        print('skill issue?')
-    end
-
-    vim.keymap.set('n', '<Up>', skillissue, { desc = 'No arrow keys sorryyy' })
-    vim.keymap.set('n', '<Down>', skillissue, { desc = 'No arrow keys sorryyy' })
-    vim.keymap.set('n', '<Left>', skillissue, { desc = 'No arrow keys sorryyy' })
-    vim.keymap.set('n', '<Right>', skillissue, { desc = 'No arrow keys sorryyy' })
-
-end
+-- Multicursors setup
+require('multicursors').setup({
+    hint_config = false,
+})
 
