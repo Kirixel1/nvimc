@@ -29,6 +29,7 @@ Leader key = `<Space>`
 | `<leader>tc` | `tabclose`                           | Close tab                          |
 | `<leader>to` | `tabnew`                             | Opens new tab                      |
 | `<leader>ts` | `<cmd>lua MiniTrailspace.trim()<CR>` | Trim redundant spaces              |
+| `<leader>mm` | `<cmd>MCstart<CR>`                   | Start multicursor mode             |
 
 ### Buffer Switching
 
