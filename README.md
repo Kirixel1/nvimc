@@ -14,6 +14,8 @@ Some of the keymaps taked from [vim.rtorr.com](https://vim.rtorr.com/) and also 
 
 ### Leader Keymaps
 
+<details>
+
 Leader key = `<Space>`
 
 | Key          | Action                               | Description                        |
@@ -31,7 +33,11 @@ Leader key = `<Space>`
 | `<leader>ts` | `<cmd>lua MiniTrailspace.trim()<CR>` | Trim redundant spaces              |
 | `<leader>mm` | `<cmd>MCstart<CR>`                   | Start multicursor mode             |
 
+</details>
+
 ### Buffer Switching
+
+<details>
 
 | Key   | Action     | Description     |
 | ----- | --------   | -------------   |
@@ -39,7 +45,11 @@ Leader key = `<Space>`
 | `gbp` | `:bprev`   | Previous buffer |
 | `gbd` | `:bdelete` | Delete buffer   |
 
+</details>
+
 ### Improved Scrolling & Search
+
+<details>
 
 | Key     | Action    | Description                                |
 | -----   | --------  | -------------                              |
@@ -48,7 +58,11 @@ Leader key = `<Space>`
 | `n`     | `nzzzv`   | Next search result, center, open folds     |
 | `N`     | `Nzzzv`   | Previous search result, center, open folds |
 
+</details>
+
 ### Window Management
+
+<details>
 
 | Key             | Description                                                        |
 | -----           | -------------                                                      |
@@ -72,7 +86,11 @@ Leader key = `<Space>`
 | `<A-k>`         | Resize window up                                                   |
 | `<A-l>`         | Resize window left                                                 |
 
+</details>
+
 ### Convenience
+
+<details>
 
 | Key                 | Action                           | Description                             |
 | -----               | --------                         | -------------                           |
@@ -84,7 +102,11 @@ Leader key = `<Space>`
 | `<Esc>`             | `:nohlsearch`                    | Clear search highlight                  |
 | `<Esc><Esc>` (term) | `<C-\><C-n>`                     | Terminal: switch to normal mode         |
 
+</details>
+
 ### Mini.nvim Mappings
+
+<details>
 
 | Key                       | Mode          | Action                           |
 | -----                     | ------        | --------                         |
@@ -97,7 +119,12 @@ Leader key = `<Space>`
 | `ga + character to align` | Visual/Normal | Align text by character to align |
 | `gX`                      | Visual/Normal | Exchanging text regions          |
 
+</details>
+
 ### Fun stuff
+
+<details>
+
 So when you're using arrow keys it prints skill issue cause you use vim!
 Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 
@@ -108,7 +135,11 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 | `<Left>`  | `print('skill issue?')` | Disabled arrow key |
 | `<Right>` | `print('skill issue?')` | Disabled arrow key |
 
+</details>
+
 ### Global
+
+<details>
 
 | Key                     | Description                                                 |
 | -----                   | -------------                                               |
@@ -121,7 +152,11 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 | `:ter[minal]`           | open a terminal window                                      |
 | `K`                     | open man page for word under cursor                         |
 
+</details>
+
 ### Macros
+
+<details>
 
 | Key   | Description            |
 | ----- | -------------          |
@@ -131,7 +166,11 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 | `@@`  | rerun last run macro   |
 | `5@q` | repeat macro q 5 times |
 
+</details>
+
 ### Cursor movement
+
+<details>
 
 | Key           | Description                                                           |
 | -----         | -------------                                                         |
@@ -182,7 +221,11 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 | `Ctrl+i`      | go to newer cursor position in jump list                              |
 | `Ctrl+o`      | go to older cursor position in jump list                              |
 
+</details>
+
 ### Insert mode
+
+<details>
 
 | Key               | Description                                                  |
 | -----             | -------------                                                |
@@ -204,7 +247,11 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 | `Ctrl+ox`         | temporarily enter normal mode to issue one command x         |
 | `Esc` or `Ctrl+c` | exit insert mode                                             |
 
+</details>
+
 ### Editing
+
+<details>
 
 | Key      | Description                                                  |
 | -----    | -------------                                                |
@@ -230,7 +277,11 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 | `Ctrl+a` | increases the number                                         |
 | `Ctrl+x` | decreases the number                                         |
 
+</details>
+
 ### Marking text (visual mode)
+
+<details>
 
 | Key                    | Description                                       |
 | -----                  | -------------                                     |
@@ -250,7 +301,11 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 | `Esc` or `Ctrl+c`      | exit visual mode                                  |
 | `Ctrl+v -> g+ctrl+a/x` | Inc/Decr sequence of numbers in visual block mode |
 
+</details>
+
 ### Visual commands
+
+<details>
 
 | Key  | Description                           |
 | ---  | -------------                         |
@@ -263,7 +318,11 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 | `U`  | change marked text to uppercase       |
 | `gv` | reselect the previously selected text |
 
+</details>
+
 ### Registers
+
+<details>
 
 | Key    | Description                              |
 | -----  | -------------                            |
@@ -273,7 +332,11 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 | `"+y`  | yank into the system clipboard register  |
 | `"+p`  | paste from the system clipboard register |
 
+</details>
+
 ### Cut and paste
+
+<details>
 
 | Key           | Description                                                         |
 | -----         | -------------                                                       |
@@ -298,7 +361,11 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 | `d$`          | delete (cut) to the end of the line                                 |
 | `x`           | delete (cut) character                                              |
 
+</details>
+
 ### Indent text
+
+<details>
 
 | Key    | Description                                       |
 | -----  | -------------                                     |
@@ -314,7 +381,11 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 | `gg=G` | re-indent entire buffer                           |
 | `]p`   | paste and adjust indent to current line           |
 
+</details>
+
 ### Exiting
+
+<details>
 
 | Key              | Description                               |
 | -----            | -------------                             |
@@ -325,7 +396,11 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 | `:q!` or `ZQ`    | quit and throw away unsaved changes       |
 | `:wqa`           | write (save) and quit on all tabs         |
 
+</details>
+
 ### Search and replace
+
+<details>
 
 | Key              | Description                                                          |
 | -----            | -------------                                                        |
@@ -340,7 +415,11 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 | `*`              | search forward for the occurrence of the word nearest to the cursor  |
 | `#`              | same as "*", but search backward                                     |
 
+</details>
+
 ### Search in multiple files
+
+<details>
 
 | Key                   | Description                                  |
 | -----                 | -------------                                |
@@ -350,7 +429,11 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 | `:cope`               | open a window containing the list of matches |
 | `:ccl`                | close the quickfix window                    |
 
+</details>
+
 ### Tabs
+
+<details>
 
 | Key              | Description                                           |
 | -----            | -------------                                         |
@@ -364,7 +447,11 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 | `:tabo`          | close all tabs except for the current one             |
 | `:tabdo command` | run the command on all tabs                           |
 
+</details>
+
 ### Working with multiple files
+
+<details>
 
 | Key        | Description                                             |
 | -----      | -------------                                           |
@@ -385,7 +472,11 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 | `Ctrl+wq`  | quit a window                                           |
 | `Ctrl+w=`  | make all windows equal height & width                   |
 
+</details>
+
 ### Different
+
+<details>
 
 | Key                      | Description                                                                                                                       |
 | -----                    | -------------                                                                                                                     |
@@ -415,8 +506,11 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 | `gx`                     | opens the current filepath, URL                                                                                                   |
 | `gf`                     | edit the file whose name is under or after the cursor. Mnemonic: "goto file"                                                      |
 
+</details>
 
 ### Documentation commands(Mostly multi repeat/search and replace/patterns topics)
+
+<details>
 
 | Topic              | Vim help                   | What it covers                                        |
 | ---------------    | -----------------          | ----------------------------------------------------- |
@@ -433,7 +527,11 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 | Flags for `:s`     | `:help :s_flags`           | `g`, `c`, `i`, `I`, `n`, `e`, ...                     |
 | Macros/registers   | `:help registers`          | Recording (`q`), replay (`@`), registers              |
 
+</details>
+
 ### File Managament(Dired)
+
+<details>
 
 | Key                 | Description                                                    |
 | ------------------- | ---------------------------------------------------            |
@@ -459,7 +557,9 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 | `(`                 | Toggle hiding/showing file details.                            |
 | `q`                 | Quit the 'dired' interface.                                    |
 
-# Multicursor
+</details>
+
+### Multicursor
 
 <details>
     <summary>Main keymaps</summary>
