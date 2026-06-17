@@ -244,3 +244,10 @@ require('multicursors').setup({
     hint_config = false,
 })
 
+-- More convinient highlight groups for the multicursors
+local cursor_color_bg = vim.api.nvim_get_hl(0, { name = 'Cursor' }).bg
+local search_color_fg = vim.api.nvim_get_hl(0, { name = 'Search' }).fg
+
+vim.api.nvim_set_hl(0, 'MultiCursorMain', { fg = search_color_fg, bg = cursor_color_bg } );
+vim.api.nvim_set_hl(0, 'MultiCursor', { fg = search_color_fg, bg = cursor_color_bg } );
+
