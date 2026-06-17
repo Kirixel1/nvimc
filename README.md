@@ -12,9 +12,10 @@ Some of the keymaps taked from [vim.rtorr.com](https://vim.rtorr.com/) and also 
 
 # Reference keymaps manual
 
-### Leader Keymaps
+## Leader Keymaps
 
 <details>
+    <summary>Click to see mappings</summary>
 
 Leader key = `<Space>`
 
@@ -35,9 +36,10 @@ Leader key = `<Space>`
 
 </details>
 
-### Buffer Switching
+## Buffer Switching
 
 <details>
+    <summary>Click to see mappings</summary>
 
 | Key   | Action     | Description     |
 | ----- | --------   | -------------   |
@@ -47,9 +49,10 @@ Leader key = `<Space>`
 
 </details>
 
-### Improved Scrolling & Search
+## Improved Scrolling & Search
 
 <details>
+    <summary>Click to see mappings</summary>
 
 | Key     | Action    | Description                                |
 | -----   | --------  | -------------                              |
@@ -60,9 +63,10 @@ Leader key = `<Space>`
 
 </details>
 
-### Window Management
+## Window Management
 
 <details>
+    <summary>Click to see mappings</summary>
 
 | Key             | Description                                                        |
 | -----           | -------------                                                      |
@@ -88,9 +92,10 @@ Leader key = `<Space>`
 
 </details>
 
-### Convenience
+## Convenience
 
 <details>
+    <summary>Click to see mappings</summary>
 
 | Key                 | Action                           | Description                             |
 | -----               | --------                         | -------------                           |
@@ -104,9 +109,10 @@ Leader key = `<Space>`
 
 </details>
 
-### Mini.nvim Mappings
+## Mini.nvim Mappings
 
 <details>
+    <summary>Click to see mappings</summary>
 
 | Key                       | Mode          | Action                           |
 | -----                     | ------        | --------                         |
@@ -121,9 +127,10 @@ Leader key = `<Space>`
 
 </details>
 
-### Fun stuff
+## Fun stuff
 
 <details>
+    <summary>Click to see mappings</summary>
 
 So when you're using arrow keys it prints skill issue cause you use vim!
 Arrow keys, mouse and other NOT efficient things are not respectful here >_<
@@ -137,9 +144,10 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 
 </details>
 
-### Global
+## Global
 
 <details>
+    <summary>Click to see mappings</summary>
 
 | Key                     | Description                                                 |
 | -----                   | -------------                                               |
@@ -154,9 +162,10 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 
 </details>
 
-### Macros
+## Macros
 
 <details>
+    <summary>Click to see mappings</summary>
 
 | Key   | Description            |
 | ----- | -------------          |
@@ -168,9 +177,10 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 
 </details>
 
-### Cursor movement
+## Cursor movement
 
 <details>
+    <summary>Click to see mappings</summary>
 
 | Key           | Description                                                           |
 | -----         | -------------                                                         |
@@ -223,9 +233,10 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 
 </details>
 
-### Insert mode
+## Insert mode
 
 <details>
+    <summary>Click to see mappings</summary>
 
 | Key               | Description                                                  |
 | -----             | -------------                                                |
@@ -249,9 +260,10 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 
 </details>
 
-### Editing
+## Editing
 
 <details>
+    <summary>Click to see mappings</summary>
 
 | Key      | Description                                                  |
 | -----    | -------------                                                |
@@ -279,9 +291,10 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 
 </details>
 
-### Marking text (visual mode)
+## Marking text (visual mode)
 
 <details>
+    <summary>Click to see mappings</summary>
 
 | Key                    | Description                                       |
 | -----                  | -------------                                     |
@@ -303,9 +316,10 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 
 </details>
 
-### Visual commands
+## Visual commands
 
 <details>
+    <summary>Click to see mappings</summary>
 
 | Key  | Description                           |
 | ---  | -------------                         |
@@ -320,9 +334,10 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 
 </details>
 
-### Registers
+## Registers
 
 <details>
+    <summary>Click to see mappings</summary>
 
 | Key    | Description                              |
 | -----  | -------------                            |
@@ -334,9 +349,10 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 
 </details>
 
-### Cut and paste
+## Cut and paste
 
 <details>
+    <summary>Click to see mappings</summary>
 
 | Key           | Description                                                         |
 | -----         | -------------                                                       |
@@ -363,9 +379,10 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 
 </details>
 
-### Indent text
+## Indent text
 
 <details>
+    <summary>Click to see mappings</summary>
 
 | Key    | Description                                       |
 | -----  | -------------                                     |
@@ -383,9 +400,10 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 
 </details>
 
-### Exiting
+## Exiting
 
 <details>
+    <summary>Click to see mappings</summary>
 
 | Key              | Description                               |
 | -----            | -------------                             |
@@ -398,9 +416,10 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 
 </details>
 
-### Search and replace
+## Search and replace
 
 <details>
+    <summary>Click to see mappings</summary>
 
 | Key              | Description                                                          |
 | -----            | -------------                                                        |
@@ -417,9 +436,10 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 
 </details>
 
-### Search in multiple files
+## Search in multiple files
 
 <details>
+    <summary>Click to see mappings</summary>
 
 | Key                   | Description                                  |
 | -----                 | -------------                                |
@@ -431,9 +451,10 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 
 </details>
 
-### Tabs
+## Tabs
 
 <details>
+    <summary>Click to see mappings</summary>
 
 | Key              | Description                                           |
 | -----            | -------------                                         |
@@ -449,9 +470,10 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 
 </details>
 
-### Working with multiple files
+## Working with multiple files
 
 <details>
+    <summary>Click to see mappings</summary>
 
 | Key        | Description                                             |
 | -----      | -------------                                           |
@@ -474,9 +496,10 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 
 </details>
 
-### Different
+## Different
 
 <details>
+    <summary>Click to see mappings</summary>
 
 | Key                      | Description                                                                                                                       |
 | -----                    | -------------                                                                                                                     |
@@ -508,9 +531,10 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 
 </details>
 
-### Documentation commands(Mostly multi repeat/search and replace/patterns topics)
+## Documentation commands(Mostly multi repeat/search and replace/patterns topics)
 
 <details>
+    <summary>Click to see mappings</summary>
 
 | Topic              | Vim help                   | What it covers                                        |
 | ---------------    | -----------------          | ----------------------------------------------------- |
@@ -529,9 +553,10 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 
 </details>
 
-### File Managament(Dired)
+## File Managament(Dired)
 
 <details>
+    <summary>Click to see mappings</summary>
 
 | Key                 | Description                                                    |
 | ------------------- | ---------------------------------------------------            |
@@ -559,10 +584,10 @@ Arrow keys, mouse and other NOT efficient things are not respectful here >_<
 
 </details>
 
-### Multicursor
+## Multicursor
 
 <details>
-    <summary>Main keymaps</summary>
+    <summary>Click to see mappings</summary>
 
 | Key     | Description                                                                               |
 | ---     | ---                                                                                       |
