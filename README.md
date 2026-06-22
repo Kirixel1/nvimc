@@ -21,7 +21,7 @@ Leader key = `<Space>`
 
 | Key          | Action                               | Description                        |
 | -----        | --------                             | -------------                      |
-| `<leader>pv` | `:Ex`                                | Open netrw file explorer           |
+| `<leader>pv` | `:Dired`                             | Opens dired file manager           |
 | `<leader>sk` | `:ShowkeysToggle`                    | Toggle showkeys widget             |
 | `<leader>O`  | `o<Esc>kO<Esc>j`                     | Add empty lines                    |
 | `<leader>o`  | `init_selection`                     | Initialize incremental selection   |
@@ -33,6 +33,7 @@ Leader key = `<Space>`
 | `<leader>to` | `tabnew`                             | Opens new tab                      |
 | `<leader>ts` | `<cmd>lua MiniTrailspace.trim()<CR>` | Trim redundant spaces              |
 | `<leader>mm` | `<cmd>MCstart<CR>`                   | Start multicursor mode             |
+| `<leader>cm` | `<cmd>Compile<CR>`                   | Enters compilation mode            |
 
 </details>
 
