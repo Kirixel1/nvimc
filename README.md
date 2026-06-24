@@ -128,23 +128,6 @@ Leader key = `<Space>`
 
 </details>
 
-## Fun stuff
-
-<details>
-    <summary>Click to see mappings</summary>
-
-So when you're using arrow keys it prints skill issue cause you use vim!
-Arrow keys, mouse and other NOT efficient things are not respectful here >_<
-
-| Key       | Action                  | Description        |
-| -----     | --------                | -------------      |
-| `<Up>`    | `print('skill issue?')` | Disabled arrow key |
-| `<Down>`  | `print('skill issue?')` | Disabled arrow key |
-| `<Left>`  | `print('skill issue?')` | Disabled arrow key |
-| `<Right>` | `print('skill issue?')` | Disabled arrow key |
-
-</details>
-
 ## Global
 
 <details>
