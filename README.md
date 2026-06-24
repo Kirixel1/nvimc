@@ -1,16 +1,13 @@
 <p align="center">
-  <h1 align="center"><b>BASED</b> neovim config</h1>
+  <h1 align="center">neovim config</h1>
 </p>
 
-Welcome to my **BASED** neovim configuration!
+You must have **neovim 0.12.0** or higher, because it uses native plugin loading via `vim.pack.add()`.
+It's well documented and self-explanatory.
 
-**BASED** means that my config is only one init.lua file no Lazy.nvim or other external package loaders dependencies.
-You must have **neovim 0.12.0+** because it uses native plugin loading via `vim.pack.add()`.
-So feel free to explore! It's well documented (I think) and self-explanatory.
+Some of the keymaps taked from [vim.rtorr.com](https://vim.rtorr.com/) and also constantly updating them when I explore new motions/commands with `:h/:help` or on the internet.
 
-Some of the keymaps taked from [vim.rtorr.com](https://vim.rtorr.com/) and also constantly updating when I explore new motions from help documentation `:h/:help`.
-
-# Reference keymaps manual
+# Keymaps Reference
 
 ## Leader Keymaps
 
@@ -50,7 +47,7 @@ Leader key = `<Space>`
 
 </details>
 
-## Improved Scrolling & Search
+## Improved scrolling & Search
 
 <details>
     <summary>Click to see mappings</summary>
@@ -75,7 +72,7 @@ Leader key = `<Space>`
 | `<C-w> j`       | Move cursor to below window                                        |
 | `<C-w> k`       | Move cursor to above window                                        |
 | `<C-w> h`       | Move cursor to right window                                        |
-| `<C-w><C-x>`    | Exchange current window with next one                              |
+| `<C-w> x`       | Exchange current window with next one                              |
 | `<C-w> H`       | Changes current window split state to right positon                |
 | `<C-w> J`       | Changes current window split state to down positon                 |
 | `<C-w> K`       | Changes current window split state to up positon                   |
@@ -102,15 +99,12 @@ Leader key = `<Space>`
 | -----               | --------                         | -------------                           |
 | `<C-Enter>`         | `o<Esc>`                         | New line below without insert mode      |
 | `<C-Backspace>`     | `O<Esc>`                         | New line above without insert mode      |
-| `<C-,>`             | `A,<Esc>`                        | Append comma at end of line             |
-| `<C-;>`             | `A;<Esc>`                        | Append semicolon at end of line         |
 | `=wb`               | `MiniTrailspace.trim()` + `gg=G` | Reindent all & trim trailing whitespace |
 | `<Esc>`             | `:nohlsearch`                    | Clear search highlight                  |
-| `<Esc><Esc>` (term) | `<C-\><C-n>`                     | Terminal: switch to normal mode         |
 
 </details>
 
-## Mini.nvim Mappings
+## Mini.nvim
 
 <details>
     <summary>Click to see mappings</summary>
@@ -138,7 +132,6 @@ Leader key = `<Space>`
 | `:h[elp] keyword`       | open help for keyword                                       |
 | `:sav[eas] file`        | save file as                                                |
 | `:clo[se]`              | close current pane                                          |
-| `:ter[minal]`           | open a terminal window                                      |
 | `:b[uffer] buffer_name` | edit buffer from the buffer list                            |
 | `:fin[d] path_to_file`  | find file in 'path' and then :edit it. see also: 'findfunc' |
 | `:ter[minal]`           | open a terminal window                                      |
@@ -296,7 +289,7 @@ Leader key = `<Space>`
 | `iB`                   | inner block with {}                               |
 | `it`                   | inner block with <> tags                          |
 | `Esc` or `Ctrl+c`      | exit visual mode                                  |
-| `Ctrl+v -> g+ctrl+a/x` | Inc/Decr sequence of numbers in visual block mode |
+| `Ctrl+v -> g+ctrl+a/x` | inc/decr sequence of numbers in visual block mode |
 
 </details>
 
@@ -520,20 +513,20 @@ Leader key = `<Space>`
 <details>
     <summary>Click to see mappings</summary>
 
-| Topic              | Vim help                   | What it covers                                        |
-| ---------------    | -----------------          | ----------------------------------------------------- |
-| `:g` (global)      | `:help :g`                 | Pattern-based multi-line command execution            |
-| `:normal`          | `:help :normal`            | Execute Normal mode commands from command-line        |
-| `:s` (substitut)   | `:help :s`                 | Search & replace syntax                               |
-| Pattern/atoms      | `:help pattern`            | All regex atoms, quantifiers, magic                   |
-| Character classes  | `:help /character-classes` | `\s`, `\d`, `\w`, `\a`, `\l`, `\u`, `\x`              |
-| Quantifiers        | `:help /multi`             | `*`, `\+`, `\=`, `\{n,m}`, `\{-}`                     |
-| Groups & capture   | `:help /\(\)`              | `\(\)`, `\|` (alternation), `\1`                      |
-| Backreferences     | `:help /\1`                | `\1` – `\9`                                           |
-| Pattern atoms list | `:help pattern-atoms`      | All pattern atoms by category (ordinary, multi, etc.) |
-| Range syntax       | `:help range`              | Line ranges (`.`, `$`, `%`, `'<,'>`, etc.)            |
-| Flags for `:s`     | `:help :s_flags`           | `g`, `c`, `i`, `I`, `n`, `e`, ...                     |
-| Macros/registers   | `:help registers`          | Recording (`q`), replay (`@`), registers              |
+| Topic                      | Vim help                   | What it covers                                        |
+| ---------------            | -----------------          | ----------------------------------------------------- |
+| `:g` (global)              | `:help :g`                 | Pattern-based multi-line command execution            |
+| `:normal`                  | `:help :normal`            | Execute Normal mode commands from command-line        |
+| `:s` (substitut)           | `:help :s`                 | Search & replace syntax                               |
+| Patterns                   | `:help pattern`            | All pattern related information                       |
+| Character classes          | `:help /character-classes` | `\s`, `\d`, `\w`, `\a`, `\l`, `\u`, `\x`              |
+| Multi items(pattern items) | `:help /multi`             | `*`, `\+`, `\=`, `\{n,m}`, `\{-}`                     |
+| Groups & capture           | `:help /\(\)`              | What are the capture groups: `\(\)`                   |
+| Backreferences             | `:help /\1`                | `\1` – `\9`                                           |
+| Pattern atoms list         | `:help pattern-atoms`      | All pattern atoms by category (ordinary, multi, etc.) |
+| Range syntax               | `:help range`              | Line ranges (`.`, `$`, `%`, `'<,'>`, etc.)            |
+| Flags for `:s`             | `:help :s_flags`           | `g`, `c`, `i`, `I`, `n`, `e`, ...                     |
+| Macros/registers           | `:help registers`          | Recording (`q`), replay (`@`), registers              |
 
 </details>
 
