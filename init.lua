@@ -42,8 +42,6 @@ vim.keymap.set('n', '<leader>pv', '<cmd>Dired<CR>',                             
 vim.keymap.set('n', '<leader>sk', '<cmd>ShowkeysToggle<CR>',                           { desc = 'Show keys in the down-center of the screen' })
 vim.keymap.set('n', '<leader>O',  'o<esc>kO<Esc>j',                                    { desc = 'Add empty lines' })
 vim.keymap.set('n', '<leader>cm', '<cmd>Compile<CR>',                                  { desc = 'Enters compilation mode' })
-vim.keymap.set('n', '<leader>tn', '<cmd>tabnext<CR>',                                  { desc = 'Next tab' })
-vim.keymap.set('n', '<leader>tp', '<cmd>tabprevious<CR>',                              { desc = 'Previous tab' })
 vim.keymap.set('n', '<leader>tc', '<cmd>tabclose<CR>',                                 { desc = 'Close tab' })
 vim.keymap.set('n', '<leader>to', '<cmd>tabnew<CR>',                                   { desc = 'Opens new tab' })
 vim.keymap.set({'v', 'n'}, '<leader>mm', '<cmd>MCstart<CR>',                           { desc = 'Enters multicursor mode' })
