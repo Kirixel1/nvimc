@@ -35,6 +35,7 @@ vim.opt.completeopt    = { 'menuone', 'noselect', 'popup', 'fuzzy' }            
 vim.opt.pumborder      = 'single'                                                     -- Single line autocompletion border box
 vim.opt.pumheight      = 5                                                            -- Maximum elements of autocompletion
 vim.opt.shell          = 'fish'                                                       -- Set default shell to fish instead of bash
+vim.opt.spell          = false                                                        -- Disables spell checker
 
 -- Key maps
 vim.g.mapleader = ' '
